@@ -98,6 +98,8 @@ h1, h2, h3{
   z-index: 2;
 }
 
+/* HEADER & NAV */
+
 .site-header{
   position: fixed;
   top: 0;
@@ -120,49 +122,50 @@ h1, h2, h3{
   gap: 24px;
 }
 
-.brand {
+/* Brand: logo + text */
+
+.brand{
   display: inline-flex;
   align-items: center;
-  gap: 8px;              /* smaller gap so logo + text are tighter */
+  gap: 10px;
   font-weight: 800;
 }
 
-/* New small logo wrapper */
-.brand-logo-wrap {
-  width: 26px;           /* control logo size here */
+.brand-logo-wrap{
+  width: 26px;            /* adjust 24–30px if you want */
   height: 26px;
-  border-radius: 8px;
+  border-radius: 50%;
   overflow: hidden;
   display: grid;
   place-items: center;
 }
 
-.brand-logo-wrap img {
+.brand-logo-wrap img{
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* Two-line company name, similar to your form screenshot style */
-.brand-name-block {
+.brand-name-block{
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
 
-.brand-name-main {
-  font-size: 0.98rem;
+.brand-name-main{
+  font-size: 1rem;
   font-weight: 800;
   color: var(--green-deep);
 }
 
-.brand-name-sub {
-  font-size: 0.7rem;
+.brand-name-sub{
+  font-size: 0.78rem;
+  font-style: italic;      /* slightly inclined */
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--muted);
+  color: var(--green-deep);
 }
+
+/* Navigation links */
 
 .site-nav{
   display: flex;
@@ -193,6 +196,8 @@ h1, h2, h3{
     inset 0 1px 0 rgba(255,255,255,0.95),
     inset 0 -2px 0 rgba(36,138,82,0.08);
 }
+
+/* HERO */
 
 .hero{
   position: relative;
@@ -288,6 +293,8 @@ h1, h2, h3{
   flex-wrap: wrap;
 }
 
+/* Buttons */
+
 .btn{
   display: inline-flex;
   align-items: center;
@@ -322,6 +329,8 @@ h1, h2, h3{
     inset 0 1px 0 rgba(255,255,255,1),
     inset 0 -2px 0 rgba(36,138,82,0.08);
 }
+
+/* Hero visual */
 
 .hero-visual{
   position: relative;
@@ -396,11 +405,15 @@ h1, h2, h3{
   letter-spacing: 0.18em;
 }
 
+/* GENERIC SECTION WRAPPER */
+
 .section{
   position: relative;
   padding: 120px 48px;
   z-index: 2;
 }
+
+/* SIGNUP BAND (Brevo waitlist) */
 
 .signup-band{
   position: relative;
@@ -460,6 +473,8 @@ h1, h2, h3{
   backdrop-filter: blur(12px);
 }
 
+/* STATS */
+
 .stats-section{
   padding: 70px 48px;
   background:
@@ -502,6 +517,8 @@ h1, h2, h3{
   font-family: "DM Mono", monospace;
 }
 
+/* SECTION HEADERS */
+
 .section-head{
   margin-bottom: 42px;
 }
@@ -518,6 +535,8 @@ h1, h2, h3{
   font-size: 1.02rem;
   max-width: 62ch;
 }
+
+/* FEATURES GRID */
 
 .features-grid{
   display: grid;
@@ -568,6 +587,8 @@ h1, h2, h3{
   font-size: 0.97rem;
 }
 
+/* AI SECURITY SECTION */
+
 .security-section{
   background:
     linear-gradient(180deg, #ebf9ff 0%, #f6fffd 100%);
@@ -609,6 +630,8 @@ h1, h2, h3{
   background: linear-gradient(135deg, var(--sky), var(--green-bright));
   box-shadow: 0 0 12px rgba(57,189,248,0.22);
 }
+
+/* Security screen UI */
 
 .security-screen{
   border-radius: 30px;
@@ -729,6 +752,8 @@ h1, h2, h3{
   font-family: "DM Mono", monospace;
 }
 
+/* SECONDARY SIGNUP (Brochure) */
+
 .secondary-signup{
   text-align: center;
   background:
@@ -757,6 +782,8 @@ h1, h2, h3{
     inset 0 1px 0 rgba(255,255,255,1),
     inset 0 -2px 0 rgba(57,189,248,0.06);
 }
+
+/* TEAM */
 
 .team-section{
   background:
@@ -871,6 +898,8 @@ h1, h2, h3{
   font-size: 0.82rem;
 }
 
+/* FOOTER */
+
 .site-footer{
   padding: 42px 48px 54px;
   background:
@@ -910,6 +939,8 @@ h1, h2, h3{
   color: #fff;
 }
 
+/* ANIMATIONS */
+
 @keyframes float{
   0%, 100%{
     transform: translateY(0);
@@ -929,6 +960,8 @@ h1, h2, h3{
     transform: scale(1.02);
   }
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 1080px){
   .hero-grid,
