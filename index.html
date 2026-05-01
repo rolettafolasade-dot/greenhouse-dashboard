@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,6 @@
   <meta property="og:title" content="Roletta Systems | Let's Grow">
   <meta property="og:description" content="Smart greenhouse automation for small-scale farmers in South Africa.">
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4E4PE73DZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +16,6 @@
     gtag('config', 'G-Q4E4PE73DZ');
   </script>
 
-  <!-- Brevo Conversations Widget -->
   <script>
     (function(d, w, c) {
       w.BrevoConversationsID = '6874f6e2b2e3d218b5d3e8a1';
@@ -27,15 +25,164 @@
       var s = d.createElement('script');
       s.async = true;
       s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-      if (d.head) d.head.appendChild(s);
+      var x = d.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
     })(document, window, 'BrevoConversations');
   </script>
+
+  <style>
+    @font-face {
+      font-display: block;
+      font-family: Roboto;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 600;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 700;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+    }
+    #sib-container input:-ms-input-placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+    #sib-container input::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+    #sib-container textarea::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+    #sib-container a { text-decoration:underline; color:#2BB2FC; }
+  </style>
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .details-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, #0f1512 0%, #18231d 100%);
+      color: #fff;
+    }
+    .details-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .details-copy h2 {
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .details-copy p,
+    .details-copy li {
+      color: rgba(255,255,255,0.82);
+    }
+    .details-points {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+    .details-points li {
+      padding-left: 18px;
+      position: relative;
+    }
+    .details-points li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #67d96d;
+      font-weight: 700;
+    }
+    .interest-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+    }
+    .interest-card h3 {
+      margin: 0 0 8px;
+      color: #111;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .interest-card p {
+      margin: 0 0 20px;
+      color: #4b5563;
+    }
+    .interest-form {
+      display: grid;
+      gap: 16px;
+    }
+    .interest-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .interest-form label {
+      display: grid;
+      gap: 8px;
+      font-weight: 600;
+      color: #1f2937;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+    }
+    .interest-form input,
+    .interest-form select,
+    .interest-form textarea {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #111827;
+      background: #fff;
+    }
+    .interest-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .interest-form button {
+      border: none;
+      border-radius: 14px;
+      padding: 15px 18px;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(135deg, #18a34a, #0a7d2a);
+      color: #fff;
+      cursor: pointer;
+    }
+    .interest-note {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+    .jump-link {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .details-wrap,
+      .interest-grid {
+        grid-template-columns: 1fr;
+      }
+      .details-section {
+        padding: 72px 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -49,7 +196,7 @@
         <a href="#features">Features</a>
         <a href="#security">AI Security</a>
         <a href="#team">Team</a>
-        <a href="#signup" class="nav-cta">Get started</a>
+        <a href="#needs-form" class="nav-cta">Get started</a>
       </nav>
     </div>
   </header>
@@ -110,7 +257,6 @@
         </div>
 
         <div class="signup-form-card">
-          <!-- UPDATED Brevo iframe URL -->
           <iframe
             width="100%"
             height="350"
@@ -250,6 +396,109 @@
       </div>
     </section>
 
+    <section class="details-section" id="needs-form">
+      <div class="container details-wrap">
+        <div class="details-copy">
+          <p class="section-tag">Tell us more</p>
+          <h2>Help us understand your farm, your needs, and the system you want most.</h2>
+          <p>
+            This extra step helps Roletta know who is interested, what type of support you need, and which system matters most to your farm before we contact you.
+          </p>
+          <ul class="details-points">
+            <li>Collects phone number and contact details for follow-up.</li>
+            <li>Captures crop type, farm size, and main farming challenges.</li>
+            <li>Lets farmers choose the system they are most interested in.</li>
+            <li>Helps Roletta prepare quotes, pilots, and support more accurately.</li>
+          </ul>
+          <a href="#interest-form" class="jump-link">Fill the interest form</a>
+        </div>
+
+        <div class="interest-card" id="interest-form">
+          <h3>Roletta farmer interest form</h3>
+          <p>Enter your details so we can understand your farm better before reaching out.</p>
+
+          <form class="interest-form" action="mailto:rolettafolasade@gmail.com" method="post" enctype="text/plain">
+            <div class="interest-grid">
+              <label>
+                Full name
+                <input type="text" name="Full name" placeholder="Your full name" required>
+              </label>
+              <label>
+                Phone number
+                <input type="tel" name="Phone number" placeholder="+27 63 000 0000" required>
+              </label>
+            </div>
+
+            <div class="interest-grid">
+              <label>
+                Email address
+                <input type="email" name="Email" placeholder="you@example.com" required>
+              </label>
+              <label>
+                Location
+                <input type="text" name="Location" placeholder="Town / Province">
+              </label>
+            </div>
+
+            <div class="interest-grid">
+              <label>
+                Farm type
+                <select name="Farm type">
+                  <option value="">Select one</option>
+                  <option>Greenhouse farming</option>
+                  <option>Open-field farming</option>
+                  <option>Mixed farming</option>
+                  <option>Community garden</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Farm size
+                <select name="Farm size">
+                  <option value="">Select one</option>
+                  <option>Very small pilot site</option>
+                  <option>Small farm</option>
+                  <option>Medium farm</option>
+                  <option>Large farm</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="interest-grid">
+              <label>
+                Main crop or produce
+                <input type="text" name="Main crop" placeholder="Tomatoes, spinach, herbs...">
+              </label>
+              <label>
+                System of most interest
+                <select name="Main interest system" required>
+                  <option value="">Choose system</option>
+                  <option>Smart irrigation</option>
+                  <option>Live sensor dashboard</option>
+                  <option>AI security system</option>
+                  <option>ROI calculator and quote support</option>
+                  <option>Full Roletta package</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Main challenge you want Roletta to solve
+              <textarea name="Main challenge" placeholder="Tell us what problem you want to solve most: water control, theft, monitoring, cost planning, crop stress, or something else."></textarea>
+            </label>
+
+            <label>
+              What do you need from us right now?
+              <textarea name="Current needs" placeholder="For example: quote, pilot access, consultation, installation support, or a custom system recommendation."></textarea>
+            </label>
+
+            <button type="submit">Send farm interest details</button>
+            <p class="interest-note">This detailed form opens your email app and prepares the full enquiry message so Roletta can review your needs manually while Brevo is used for waitlist capture above.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section secondary-signup" id="signup">
       <div class="container secondary-signup-inner">
         <p class="section-tag">Brochure and pricing</p>
@@ -259,7 +508,6 @@
         </p>
 
         <div class="secondary-form-wrapper">
-          <!-- UPDATED Brevo iframe URL (same as above, but different height & radius) -->
           <iframe
             width="100%"
             height="300"
@@ -331,7 +579,6 @@
     </div>
   </footer>
 
-  <!-- GA4 Button Click Tracking -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var signupBtn = document.getElementById('signupButton');
@@ -348,9 +595,9 @@
       var navCtaBtn = document.querySelector('.nav-cta');
       if (navCtaBtn) {
         navCtaBtn.addEventListener('click', function () {
-          gtag('event', 'signup_click', {
+          gtag('event', 'button_click', {
             event_category: 'engagement',
-            event_label: 'Nav CTA Button',
+            event_label: 'Detailed Needs Form Button',
             value: 1
           });
         });
@@ -368,6 +615,24 @@
       }
     });
   </script>
+
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+    window.LOCALE = 'en';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+    window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+    window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+    window.translation = {
+      common: {
+        selectedList: '{quantity} list selected',
+        selectedLists: '{quantity} lists selected',
+        selectedOption: '{quantity} selected',
+        selectedOptions: '{quantity} selected',
+      }
+    };
+    var AUTOHIDE = Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
