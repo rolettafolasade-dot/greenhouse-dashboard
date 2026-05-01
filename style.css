@@ -46,7 +46,27 @@
 html{
   scroll-behavior: smooth;
 }
+.watering-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
 
+.watering-cursor img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Hide default cursor where you want the custom one */
+body {
+  cursor: none;
+}
 body{
   font-family: "DM Sans", sans-serif;
   color: var(--text);
