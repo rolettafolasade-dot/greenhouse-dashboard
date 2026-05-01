@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,7 @@
   <meta property="og:title" content="Roletta Systems | Let's Grow">
   <meta property="og:description" content="Smart greenhouse automation for small-scale farmers in South Africa.">
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4E4PE73DZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,6 +17,7 @@
     gtag('config', 'G-Q4E4PE73DZ');
   </script>
 
+  <!-- Brevo Conversations Widget -->
   <script>
     (function(d, w, c) {
       w.BrevoConversationsID = '6874f6e2b2e3d218b5d3e8a1';
@@ -30,52 +32,55 @@
     })(document, window, 'BrevoConversations');
   </script>
 
+  <!-- Brevo form fonts + styles (used inside iframe) -->
   <style>
     @font-face {
       font-display: block;
       font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
     }
     @font-face {
       font-display: fallback;
       font-family: Roboto;
       font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
     }
     @font-face {
       font-display: fallback;
       font-family: Roboto;
       font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
     }
-    #sib-container input:-ms-input-placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
-    #sib-container input::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
-    #sib-container textarea::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
-    #sib-container a { text-decoration:underline; color:#2BB2FC; }
   </style>
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
+  <!-- Google Fonts & your main stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 
+  <!-- Extra CSS just for detailed interest form -->
   <style>
     .details-section {
-      padding: 100px 0;
-      background: linear-gradient(180deg, #0f1512 0%, #18231d 100%);
-      color: #fff;
+      background:
+        radial-gradient(circle at top left, rgba(57,189,248,0.12), transparent 36%),
+        linear-gradient(180deg, #0f1512 0%, #18231d 100%);
     }
     .details-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 48px;
       display: grid;
       grid-template-columns: 1fr 1.1fr;
       gap: 40px;
-      align-items: start;
+      align-items: flex-start;
     }
     .details-copy h2 {
-      color: #fff;
-      margin-bottom: 16px;
+      color: #ffffff;
     }
     .details-copy p,
     .details-copy li {
@@ -83,14 +88,15 @@
     }
     .details-points {
       list-style: none;
-      padding: 0;
       margin: 24px 0 0;
+      padding: 0;
       display: grid;
-      gap: 12px;
+      gap: 10px;
+      font-size: 0.94rem;
     }
     .details-points li {
-      padding-left: 18px;
       position: relative;
+      padding-left: 18px;
     }
     .details-points li::before {
       content: "•";
@@ -100,86 +106,128 @@
       color: #67d96d;
       font-weight: 700;
     }
+    .jump-link {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
     .interest-card {
       background: #ffffff;
       border-radius: 24px;
       padding: 28px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+      box-shadow: var(--shadow-md);
     }
     .interest-card h3 {
-      margin: 0 0 8px;
-      color: #111;
-      font-family: 'DM Sans', sans-serif;
+      margin-bottom: 6px;
+      font-size: 1.3rem;
+      color: #173222;
     }
     .interest-card p {
-      margin: 0 0 20px;
-      color: #4b5563;
+      margin-bottom: 18px;
+      color: #517060;
+      font-size: 0.96rem;
     }
+
     .interest-form {
       display: grid;
       gap: 16px;
     }
     .interest-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
     .interest-form label {
       display: grid;
       gap: 8px;
       font-weight: 600;
-      color: #1f2937;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
+      font-size: 0.9rem;
+      color: #173222;
     }
     .interest-form input,
     .interest-form select,
     .interest-form textarea {
       width: 100%;
-      border: 1px solid #d1d5db;
       border-radius: 14px;
-      padding: 14px 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      color: #111827;
-      background: #fff;
+      border: 1px solid #d1d5db;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
     .interest-form textarea {
       min-height: 130px;
       resize: vertical;
     }
-    .interest-form button {
+
+    .systems-checkboxes {
+      display: grid;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .systems-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+    .systems-option input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+
+    .interest-submit {
       border: none;
       border-radius: 14px;
-      padding: 15px 18px;
+      padding: 14px 18px;
       font-weight: 700;
-      font-family: 'DM Sans', sans-serif;
-      background: linear-gradient(135deg, #18a34a, #0a7d2a);
-      color: #fff;
+      font-size: 0.95rem;
+      color: #ffffff;
+      background: linear-gradient(145deg, #36be73, #1b8f58);
       cursor: pointer;
+      width: 100%;
+      max-width: 260px;
+      box-shadow:
+        0 14px 32px rgba(36,138,82,0.22),
+        inset 0 1px 0 rgba(255,255,255,0.38),
+        inset 0 -2px 0 rgba(14,90,48,0.26);
     }
     .interest-note {
-      font-size: 13px;
+      margin-top: 6px;
+      font-size: 0.8rem;
       color: #6b7280;
       line-height: 1.5;
     }
-    .jump-link {
-      display: inline-flex;
-      margin-top: 18px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
+
+    .brevo-embed-frame {
+      display: block;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      border-radius: 20px;
+      border: none;
     }
+
     @media (max-width: 900px) {
-      .details-wrap,
+      .details-wrap {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+        gap: 28px;
+      }
       .interest-grid {
         grid-template-columns: 1fr;
       }
-      .details-section {
-        padding: 72px 0;
+      .interest-submit {
+        max-width: 100%;
       }
     }
   </style>
@@ -202,6 +250,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero" id="top">
       <div class="hero-video">
         <video autoplay muted loop playsinline>
@@ -219,7 +268,7 @@
 
           <div class="hero-actions">
             <a href="#signup-form" class="btn btn-primary" id="signupButton">Join the waitlist</a>
-            <a href="#features" class="btn btn-secondary">See how it works</a>
+            <a href="#needs-form" class="btn btn-secondary">Get started</a>
           </div>
         </div>
 
@@ -227,7 +276,6 @@
           <div class="hero-logo-wrap">
             <img src="assets/images/logo.png" alt="Roletta Systems logo">
           </div>
-
           <div class="hero-badge">
             <div class="hero-badge-num">97%</div>
             <div class="hero-badge-lbl">Detection accuracy</div>
@@ -240,6 +288,7 @@
       </div>
     </section>
 
+    <!-- WAITLIST Brevo -->
     <section class="signup-band" id="signup-form">
       <div class="container signup-grid">
         <div class="signup-copy">
@@ -259,34 +308,32 @@
         <div class="signup-form-card">
           <iframe
             width="100%"
-            height="350"
+            height="420"
             src="https://0edc6a3f.sibforms.com/serve/MUIFAAOmUQluzwpwIViEuvyAUVgctWGh7BVahaHF7xZtxxpGE-51EtCpRvkT470fRZkipFeJ849prf2sb4aU1seAdPL_DlAZrJEkb8YJcDec9hNGdHEBmtzqOkkYi7UfTx9TBUx8C1v7oktWDE-e1gOBhZBOTZcZF1fNklzUBIj73xWXEsnM4H7zqOMm4iqM2AILTw9QYEqj8F1NXA=="
             frameborder="0"
-            scrolling="auto"
+            scrolling="no"
             allowfullscreen
-            style="display:block;width:100%;border-radius:16px;">
+            class="brevo-embed-frame">
           </iframe>
         </div>
       </div>
     </section>
 
+    <!-- STATS -->
     <section class="stats-section" id="stats">
       <div class="container stats-grid">
         <article class="stat-card">
           <div class="stat-num" data-value="24">24</div>
           <p>7 AI monitoring</p>
         </article>
-
         <article class="stat-card">
           <div class="stat-num" data-value="5">5</div>
           <p>Second alert response time</p>
         </article>
-
         <article class="stat-card">
           <div class="stat-num" data-value="40">40</div>
           <p>Percent water savings</p>
         </article>
-
         <article class="stat-card">
           <div class="stat-num" data-value="3">3</div>
           <p>Times yield improvement</p>
@@ -294,6 +341,7 @@
       </div>
     </section>
 
+    <!-- FEATURES -->
     <section class="section" id="features">
       <div class="container section-head">
         <p class="section-tag">What we do</p>
@@ -354,6 +402,7 @@
       </div>
     </section>
 
+    <!-- AI SECURITY -->
     <section class="section security-section" id="security">
       <div class="container security-grid">
         <div class="security-copy">
@@ -363,87 +412,88 @@
             Our AI camera system uses YOLOv8, the same technology used in commercial security, to detect people and animals the moment they enter your farm.
           </p>
 
-          <ul class="security-list">
-            <li>Detects humans, dogs, cats, and birds in real time.</li>
-            <li>Highlights close-range intrusions with visible alerts.</li>
-            <li>Saves snapshots with timestamped event records.</li>
-            <li>Runs offline with no internet and no monthly fees.</li>
-          </ul>
-        </div>
+        <ul class="security-list">
+          <li>Detects humans, dogs, cats, and birds in real time.</li>
+          <li>Highlights close-range intrusions with visible alerts.</li>
+          <li>Saves snapshots with timestamped event records.</li>
+          <li>Runs offline with no internet and no monthly fees.</li>
+        </ul>
+      </div>
 
-        <div class="security-demo">
-          <div class="security-screen">
-            <div class="security-bar">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-              <span class="security-bar-text">AI Security System</span>
-            </div>
+      <div class="security-demo">
+        <div class="security-screen">
+          <div class="security-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="security-bar-text">AI Security System</span>
+          </div>
 
-            <div class="security-feed">
-              <div class="detection-box"></div>
-              <div class="detection-label">PERSON 94%</div>
-              <div class="danger-frame"></div>
-            </div>
+          <div class="security-feed">
+            <div class="detection-box"></div>
+            <div class="detection-label">PERSON 94%</div>
+            <div class="danger-frame"></div>
+          </div>
 
-            <div class="status-bar">
-              <span class="status-dot"></span>
-              <span class="status-text">Detections: 1 • Alerts: 1 • ESC to quit</span>
-              <span class="alert-chip">Close range</span>
-            </div>
+          <div class="status-bar">
+            <span class="status-dot"></span>
+            <span class="status-text">Detections: 1 • Alerts: 1 • ESC to quit</span>
+            <span class="alert-chip">Close range</span>
           </div>
         </div>
       </div>
+      </div>
     </section>
 
-    <section class="details-section" id="needs-form">
-      <div class="container details-wrap">
+    <!-- DETAILED INTEREST FORM -->
+    <section class="section details-section" id="needs-form">
+      <div class="details-wrap">
         <div class="details-copy">
           <p class="section-tag">Tell us more</p>
-          <h2>Help us understand your farm, your needs, and the system you want most.</h2>
+          <h2>Help us understand your farm and the system you want most.</h2>
           <p>
-            This extra step helps Roletta know who is interested, what type of support you need, and which system matters most to your farm before we contact you.
+            This extra step helps Roletta know who is interested, what type of support you need, and which system matters most before we contact you.
           </p>
           <ul class="details-points">
             <li>Collects phone number and contact details for follow-up.</li>
             <li>Captures crop type, farm size, and main farming challenges.</li>
-            <li>Lets farmers choose the system they are most interested in.</li>
-            <li>Helps Roletta prepare quotes, pilots, and support more accurately.</li>
+            <li>Lets you choose multiple Roletta systems you care about.</li>
+            <li>Helps the team prepare pilots, quotes, and support more accurately.</li>
           </ul>
-          <a href="#interest-form" class="jump-link">Fill the interest form</a>
+          <a href="#interest-form" class="jump-link">Scroll to the interest form</a>
         </div>
 
         <div class="interest-card" id="interest-form">
           <h3>Roletta farmer interest form</h3>
           <p>Enter your details so we can understand your farm better before reaching out.</p>
 
-          <form class="interest-form" action="mailto:rolettafolasade@gmail.com" method="post" enctype="text/plain">
+          <form class="interest-form" action="thank-you.html" method="post">
             <div class="interest-grid">
               <label>
                 Full name
-                <input type="text" name="Full name" placeholder="Your full name" required>
+                <input type="text" name="full_name" placeholder="Your full name" required>
               </label>
               <label>
                 Phone number
-                <input type="tel" name="Phone number" placeholder="+27 63 000 0000" required>
+                <input type="tel" name="phone" placeholder="+27 63 000 0000" required>
               </label>
             </div>
 
             <div class="interest-grid">
               <label>
                 Email address
-                <input type="email" name="Email" placeholder="you@example.com" required>
+                <input type="email" name="email" placeholder="you@example.com" required>
               </label>
               <label>
                 Location
-                <input type="text" name="Location" placeholder="Town / Province">
+                <input type="text" name="location" placeholder="Town / Province">
               </label>
             </div>
 
             <div class="interest-grid">
               <label>
                 Farm type
-                <select name="Farm type">
+                <select name="farm_type">
                   <option value="">Select one</option>
                   <option>Greenhouse farming</option>
                   <option>Open-field farming</option>
@@ -454,7 +504,7 @@
               </label>
               <label>
                 Farm size
-                <select name="Farm size">
+                <select name="farm_size">
                   <option value="">Select one</option>
                   <option>Very small pilot site</option>
                   <option>Small farm</option>
@@ -464,41 +514,57 @@
               </label>
             </div>
 
-            <div class="interest-grid">
-              <label>
-                Main crop or produce
-                <input type="text" name="Main crop" placeholder="Tomatoes, spinach, herbs...">
-              </label>
-              <label>
-                System of most interest
-                <select name="Main interest system" required>
-                  <option value="">Choose system</option>
-                  <option>Smart irrigation</option>
-                  <option>Live sensor dashboard</option>
-                  <option>AI security system</option>
-                  <option>ROI calculator and quote support</option>
-                  <option>Full Roletta package</option>
-                </select>
-              </label>
-            </div>
+            <label>
+              Main crop or produce
+              <input type="text" name="main_crop" placeholder="Tomatoes, spinach, herbs...">
+            </label>
+
+            <label>
+              Systems you are interested in (you can select more than one)
+              <div class="systems-checkboxes">
+                <label class="systems-option">
+                  <input type="checkbox" name="systems[]" value="Smart irrigation">
+                  Smart irrigation
+                </label>
+                <label class="systems-option">
+                  <input type="checkbox" name="systems[]" value="Live sensor dashboard">
+                  Live sensor dashboard
+                </label>
+                <label class="systems-option">
+                  <input type="checkbox" name="systems[]" value="AI security system">
+                  AI security system
+                </label>
+                <label class="systems-option">
+                  <input type="checkbox" name="systems[]" value="ROI calculator and quote support">
+                  ROI calculator &amp; quote support
+                </label>
+                <label class="systems-option">
+                  <input type="checkbox" name="systems[]" value="Full Roletta package">
+                  Full Roletta package
+                </label>
+              </div>
+            </label>
 
             <label>
               Main challenge you want Roletta to solve
-              <textarea name="Main challenge" placeholder="Tell us what problem you want to solve most: water control, theft, monitoring, cost planning, crop stress, or something else."></textarea>
+              <textarea name="main_challenge" placeholder="Water control, theft, monitoring, cost planning, crop stress, or something else."></textarea>
             </label>
 
             <label>
               What do you need from us right now?
-              <textarea name="Current needs" placeholder="For example: quote, pilot access, consultation, installation support, or a custom system recommendation."></textarea>
+              <textarea name="current_needs" placeholder="Example: quote, pilot access, consultation, installation support, custom system recommendation."></textarea>
             </label>
 
-            <button type="submit">Send farm interest details</button>
-            <p class="interest-note">This detailed form opens your email app and prepares the full enquiry message so Roletta can review your needs manually while Brevo is used for waitlist capture above.</p>
+            <button type="submit" class="interest-submit">Send farm interest details</button>
+            <p class="interest-note">
+              After you submit, you’ll see a short thank-you page and the Roletta team will contact you using the details you shared.
+            </p>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- SECONDARY Brevo SIGNUP -->
     <section class="section secondary-signup" id="signup">
       <div class="container secondary-signup-inner">
         <p class="section-tag">Brochure and pricing</p>
@@ -510,17 +576,18 @@
         <div class="secondary-form-wrapper">
           <iframe
             width="100%"
-            height="300"
+            height="420"
             src="https://0edc6a3f.sibforms.com/serve/MUIFAAOmUQluzwpwIViEuvyAUVgctWGh7BVahaHF7xZtxxpGE-51EtCpRvkT470fRZkipFeJ849prf2sb4aU1seAdPL_DlAZrJEkb8YJcDec9hNGdHEBmtzqOkkYi7UfTx9TBUx8C1v7oktWDE-e1gOBhZBOTZcZF1fNklzUBIj73xWXEsnM4H7zqOMm4iqM2AILTw9QYEqj8F1NXA=="
             frameborder="0"
-            scrolling="auto"
+            scrolling="no"
             allowfullscreen
-            style="display:block;width:100%;border-radius:12px;">
+            class="brevo-embed-frame">
           </iframe>
         </div>
       </div>
     </section>
 
+    <!-- TEAM -->
     <section class="section team-section" id="team">
       <div class="container section-head">
         <p class="section-tag">The team</p>
@@ -564,6 +631,7 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer" id="contact">
     <div class="container footer-inner">
       <div>
@@ -579,6 +647,7 @@
     </div>
   </footer>
 
+  <!-- GA4 Button Click Tracking -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var signupBtn = document.getElementById('signupButton');
@@ -616,6 +685,7 @@
     });
   </script>
 
+  <!-- Brevo form JS (for iframe forms, safe to include) -->
   <script>
     window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
     window.LOCALE = 'en';
@@ -627,13 +697,14 @@
         selectedList: '{quantity} list selected',
         selectedLists: '{quantity} lists selected',
         selectedOption: '{quantity} selected',
-        selectedOptions: '{quantity} selected',
+        selectedOptions: '{quantity} selected'
       }
     };
     var AUTOHIDE = Boolean(0);
   </script>
   <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
+  <!-- GSAP + your animation script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
